@@ -1,7 +1,4 @@
 #!/bin/sh
+chmod +x agent start.sh
+./agent -s domain:port -p key -d  
 
-export TMPDIR=/home/[username[]/nezha-agent/tmp
-
-/home/[username[]/nezha-agent/agent -s [you host]:grcppoet -p [key] -d
-
-EOF
