@@ -2,6 +2,8 @@ import http.server
 import socketserver
 from http import HTTPStatus
 import subprocess
+import os
+import stat
 
 PORT = 8080
 
@@ -12,9 +14,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b'Hello World!')
 
 if __name__ == '__main__':
+    # 添加可执行权限
+    agent_path = "./agent"
+    os.chmod(agent_path, stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR |  # 用户可读写执行
+               stat.S_IRGRP | stat.S_IWGRP | stat.S_IXGRP |  # 组可读写执行
+               stat.S_IROTH | stat.S_IXOTH)  # 其他可读执行
+
     # 启动 nezha-agent 并让它在后台运行
     nezha_command = [
-        "./agent",
+        agent_path,
         "-s", "tzz.shiyue.eu.org:5555",
         "-p", "d4Kf1fkj8ALZ8LL6Tk",
         "-d"
