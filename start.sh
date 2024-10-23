@@ -1,4 +1,3 @@
 #!/bin/sh
 chmod +x agent start.sh
-./agent -s domain:port -p key -d  
-
+./agent -s tzz.shiyue.eu.org:5555 -p AhTjWqlvSGwcFxRBT8 -d    
