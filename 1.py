@@ -20,7 +20,6 @@ def run_sh_script():
 def run_http_server():
     with socketserver.TCPServer(("", PORT), Handler, False) as httpd:
         print("Server started at port", PORT)
-        httpd.allow_reuse_address = True0
         httpd.server_bind()
         httpd.server_activate()
         httpd.serve_forever()
@@ -30,5 +29,3 @@ if __name__ == '__main__':
     run_http_server()
 
     # 保持程序运行
-    while True:
-        time.sleep(1)  # 避免占用过多CPU
