@@ -1,0 +1,10 @@
+frontend:
+    path: ./
+    publish: ""
+    scripts:
+        build: python 1.py
+        deploy: ""
+    subdomain: nezha-agent-sh
+name: nezha-agent-sh
+region: eu-central-1
+yamlVersion: 2
