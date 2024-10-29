@@ -1,5 +1,5 @@
 import http.server
-import socketserver  
+import socketserver
 from http import HTTPStatus
 import subprocess
 import os
