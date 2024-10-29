@@ -1,0 +1,12 @@
+{
+  "name": "Python HTTP Server",
+  "description": "A simple HTTP server with nezha-agent",
+  "repository": "https://github.com/yourusername/your-repo",
+  "keywords": ["python", "http-server"],
+  "env": {
+    "PORT": {
+      "description": "The port the server will listen on",
+      "value": "8080"
+    }
+  }
+}
