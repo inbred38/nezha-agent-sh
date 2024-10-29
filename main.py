@@ -1,6 +1,6 @@
 import http.server
 import socketserver
-from http import HTTPStatus  
+from http import HTTPStatus
 import subprocess
 import os
 import stat
